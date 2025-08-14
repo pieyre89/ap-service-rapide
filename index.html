@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AP Service Rapide - Garage Auto Théziers</title>
+<style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; background:#111; color:#fff; }
+    header { background:#000; color:#00ff44; padding:30px 0; text-align:center; animation:fadeIn 1s ease-in; }
+    header h1 { margin:0; font-size:2.5em; }
+    header p { font-size:1.2em; color:#ccc; }
+    nav { background:#222; display:flex; flex-wrap: wrap; justify-content:center; }
+    nav a { color:#00ff44; padding:15px 20px; text-decoration:none; font-weight:bold; transition:0.3s; }
+    nav a:hover { background:#00ff44; color:#000; border-radius:5px; }
+    section { padding:50px 20px; max-width:1100px; margin:auto; }
+    h2 { color:#00ff44; text-align:center; margin-bottom:40px; font-size:2em; }
+    .services, .contact-form { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+    .service { flex:1 1 250px; background:#222; padding:25px; border-radius:12px; box-shadow:0 0 15px rgba(0,255,68,0.5); text-align:center; transition:0.3s; }
+    .service:hover { transform:translateY(-5px); box-shadow:0 0 25px rgba(0,255,68,0.7); }
+    form { background:#222; padding:25px; border-radius:12px; box-shadow:0 0 15px rgba(0,255,68,0.5); flex:1; max-width:500px; margin:auto; }
+    input, select, textarea, button { width:100%; padding:12px; margin:12px 0; border-radius:8px; border:1px solid #00ff44; background:#000; color:#fff; font-size:16px; }
+    input:focus, select:focus, textarea:focus { outline:none; border-color:#00ff44; box-shadow:0 0 10px #00ff44; }
+    button { background:#00ff44; color:#000; border:none; cursor:pointer; font-size:18px; transition:0.3s; }
+    button:hover { background:#fff; color:#000; box-shadow:0 0 15px #00ff44; }
+    footer { background:#000; color:#00ff44; text-align:center; padding:30px; margin-top:40px; }
+    iframe { width:100%; border:0; border-radius:12px; margin-top:20px; }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>AP Service Rapide</h1>
+    <p>Votre garage de confiance à Théziers</p>
+</header>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#devis">Demande de devis</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="services">
+    <h2>Nos Services</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Entretien général</h3>
+            <p>Vidange, filtres et contrôle complet de votre véhicule.</p>
+        </div>
+        <div class="service">
+            <h3>Révision / Vidange</h3>
+            <p>Maintenance régulière pour garantir la fiabilité de votre voiture.</p>
+        </div>
+        <div class="service">
+            <h3>Pneus</h3>
+            <p>Contrôle, montage et remplacement pour une sécurité optimale.</p>
+        </div>
+        <div class="service">
+            <h3>Climatisation</h3>
+            <p>Diagnostic, recharge et réparation de votre climatisation.</p>
+        </div>
+    </div>
+</section>
+
+<section id="devis">
+    <h2>Demande de devis</h2>
+    <form name="devis" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="devis">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <input type="tel" name="telephone" placeholder="Votre téléphone" required>
+        <select name="service" required>
+            <option value="">Choisissez un service</option>
+            <option value="Entretien général">Entretien général</option>
+            <option value="Révision / Vidange">Révision / Vidange</option>
+            <option value="Pneus">Pneus</option>
+            <option value="Climatisation">Climatisation</option>
+        </select>
+        <input type="text" name="modele" placeholder="Modèle de voiture" required>
+        <input type="text" name="plaque" placeholder="Plaque d'immatriculation" required>
+        <input type="number" name="kilometrage" placeholder="Kilométrage" required>
+        <textarea name="message" placeholder="Décrivez votre demande..." rows="5"></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p style="text-align:center;">AP Service Rapide<br>Théziers, France<br>Téléphone : 06 83 00 07 09</p>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.616861292903!2d4.699071415517754!3d43.9700428791297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b71b5e2e7f2d9b%3A0xabcdef1234567890!2sAP%20Service%20Rapide%2C%20Th%C3%A9ziers%2C%20France!5e0!3m2!1sfr!2sus!4v1691999999999"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+</section>
+
+<footer>
+    <p>&copy; 2025 AP Service Rapide - Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
